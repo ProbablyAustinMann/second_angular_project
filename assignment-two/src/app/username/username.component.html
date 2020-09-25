@@ -3,10 +3,12 @@
 <input
 type="text"
 class="form-control"
+[(ngModel)]="username"
 >
 
 <button
   class="btn btn-primary"
+  [disabled]='!AllowNewUsername'
   >Add Username</button>
 
 <p>{{ username }}</p>

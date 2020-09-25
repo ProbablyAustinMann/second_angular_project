@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsernameComponent implements OnInit {
 
+  allowNewUsername = false;
   username : string = '';
+  usernameStatus : string = 'Username Added Successfully'
 
   constructor() { }
 
@@ -17,4 +19,11 @@ export class UsernameComponent implements OnInit {
   getUsername() {
   return this.username;
  }
+
+ changeButtonWhenNotBlank () {
+   if (this.username != '') {
+     this.allowNewUsername = true;
+   }
+ }
+
 }
