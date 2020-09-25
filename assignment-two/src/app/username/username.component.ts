@@ -20,10 +20,15 @@ export class UsernameComponent implements OnInit {
   return this.username;
  }
 
- changeButtonWhenNotBlank () {
+ changeButtonWhenNotBlank() {
    if (this.username != '') {
      this.allowNewUsername = true;
    }
+ }
+
+ resetUsername() {
+   this.username = '';
+   this.allowNewUsername = false;
  }
 
 }

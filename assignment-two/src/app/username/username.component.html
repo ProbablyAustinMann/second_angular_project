@@ -4,11 +4,13 @@
 type="text"
 class="form-control"
 [(ngModel)]="username"
+(keyup)="changeButtonWhenNotBlank()"
 >
 
 <button
   class="btn btn-primary"
-  [disabled]='!AllowNewUsername'
+  [disabled]='!allowNewUsername'
+  (click)="resetUsername()"
   >Add Username</button>
 
 <p>{{ username }}</p>
